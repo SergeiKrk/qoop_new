@@ -60,8 +60,9 @@ const articleDate = pubDate.toISOString()
 						width={1000}
 						height={500}
 						quality={100}
-						format='jpg'
+						format='webp'
 						loading='eager'
+						quality='high'
 						class='rounded-md w-full max-h-[300px]  md:max-h-[500px] my-8 object-cover'
 						alt={`img of ${title}`}
 					/>
@@ -89,7 +90,7 @@ const articleDate = pubDate.toISOString()
 				if (entry.isIntersecting) {
 					index?.classList.remove('bg-slate-200', 'dark:bg-slate-800') // remove bg
 					index?.classList.add(
-						'bg-indigo-600',
+						'bg-indigo-400',
 						'dark:bg-indigo-700',
 						'text-white',
 						'font-bold',
@@ -99,7 +100,7 @@ const articleDate = pubDate.toISOString()
 				} else {
 					index?.classList.add('bg-slate-200', 'dark:bg-slate-800') // add bg
 					index?.classList.remove(
-						'bg-indigo-600',
+						'bg-indigo-400',
 						'dark:bg-indigo-700',
 						'text-white',
 						'font-bold',
