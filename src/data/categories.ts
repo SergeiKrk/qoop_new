@@ -7,5 +7,6 @@ export const CATEGORIES = [
 	'Category 5',
 	'Пол',
 	'Интерьер',
-	'Полезные советы'
+	'Полезные советы',
+	'Другое'
 ] as const
