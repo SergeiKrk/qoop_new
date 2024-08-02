@@ -11,59 +11,35 @@ const {
 } = Astro.props
 ---
 
-<article class='grid grid-rows-[300px_auto] md:grid-rows-[300px_220px] min-h-full group'>
-	<a class='relative overflow-hidden' href={`/post/${slug}/`}>
-		<Image
-			src={heroImage}
-			width={600}
-			height={200}
-			format='webp'
-			quality='mid'
-			class='h-full min-w-full object-cover hover:scale-[101%] transition-all duration-200 rounded-[2px]'
-			alt={`img of ${title}`}
-		/>
+<article class='grid min-h-full'>
+	<a href={`/post/${slug}/`}>
+		<div class='relative overflow-hidden rounded-2xl h-60'>
+			<Image
+				src={heroImage}
+				width={600}
+				height={200}
+				format='webp'
+				quality='mid'
+				class='h-full min-w-full object-cover hover:scale-[101%] transition-all duration-200 rounded-[2px]'
+				alt={`img of ${title}`}
+			/>
 
-		<div class='z-30 absolute bottom-0 w-full h-20'>
+			<!-- <div class='z-30 absolute bottom-0 w-full h-24'>
 			<div class='-z-10 absolute bottom-0 glass w-full min-h-full'></div>
 			<div class='flex items-center justify-between gap-x-1 text-white px-6 py-4'>
 				<div class='flex flex-col gap-1 items-center justify-center'>
-					<FormattedDate date={pubDate} />
-					<span class='text-sm'> {readTime}</span>
+					<span class='text-lg'>{title}</span>
 				</div>
-
-				<span class='pb-4'>{category}</span>
 			</div>
+		</div> -->
+		</div>
+		<div class='mt-4 mb-14 mx-4'>
+			<span
+				class='text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-900 to-teal-950 dark:from-fuchsia-200 dark:to-teal-200'
+				>{title}</span
+			>
 		</div>
 	</a>
-
-	<div class='flex justify-between flex-col gap-4 md:gap-0 py-6 pl-1'>
-		<div class='flex flex-col gap-3'>
-			<div class='flex flex-col gap-2'>
-				<a class='text-2xl font-semibold -tracking-wider' href={`/post/${slug}/`}>
-					{title}
-				</a>
-			</div>
-
-			<p
-				class='overflow-hidden line-clamp-3 text-gray-700 dark:text-white mb-5 font-[400] md:pr-[15%]'
-			>
-				{description}
-			</p>
-		</div>
-
-		<footer class='flex justify-between items-center'>
-			<a
-				href={`/post/${slug}/`}
-				class='flex justify-center items-center dark:text-white rounded-full hover:translate-x-1 transition-transform duration-150 ease-in-out font-semibold gap-1 group'
-				aria-label={`go to ${title}`}
-			>
-				Читать <span
-					class='mt-[1px] group-hover:rotate-45 transition-transform duration-250 ease-in-out'
-					><ArrowUp width='18' height='18' /></span
-				>
-			</a>
-		</footer>
-	</div>
 </article>
 
 <script>
