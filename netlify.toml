@@ -1,7 +1,0 @@
-[build]
-  command = "pnpm build"
-  publish = "build"
-  cache = ["node_modules", ".pnpm-store"]
-
-[context.production.environment]
-  NODE_VERSION = "18.17.1"
