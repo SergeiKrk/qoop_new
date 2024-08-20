@@ -19,6 +19,10 @@ const posts = await getPostByTag(tag)
 ---
 
 <BaseLayout title={tag}>
-	<TitlePage title={tag} />
-	<ListPosts posts={posts} />
+	<div class='max-w-7xl mx-auto'>
+		<TitlePage title={tag} />
+		<div class='my-16'>
+			<ListPosts posts={posts} />
+		</div>
+	</div>
 </BaseLayout>

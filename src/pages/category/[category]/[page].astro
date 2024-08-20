@@ -33,8 +33,12 @@ const posts = page.data
 ---
 
 <BaseLayout title={params.category}>
-	<TitlePage title={unsluglifyNameCategory} />
-	<ListCategories activeCategory={params.category} />
-	<ListPosts posts={posts} />
-	<Pagination page={page} />
+	<div class='max-w-7xl mx-auto'>
+		<TitlePage title={unsluglifyNameCategory} />
+		<div class='my-16'>
+			<ListCategories activeCategory={params.category} />
+		</div>
+		<ListPosts posts={posts} />
+		<Pagination page={page} />
+	</div>
 </BaseLayout>

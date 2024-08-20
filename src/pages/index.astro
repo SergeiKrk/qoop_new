@@ -10,10 +10,8 @@ const posts = await getPosts(MAX_POSTS)
 
 <BaseLayout title='Главная'>
 	<HomeHero client:load />
-	<div class='max-w-6xl mx-auto'>
-		<div>
-			<ListPosts FirstBig={true} posts={posts} />
-		</div>
+	<div class='max-w-7xl mx-auto'>
+		<ListPosts FirstBig={true} posts={posts} />
 	</div>
 </BaseLayout>
 

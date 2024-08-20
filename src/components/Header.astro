@@ -6,6 +6,8 @@ import MenuIcon from './icons/MenuIcon.astro'
 import Search from '@/components/Search'
 import TagIcon from './icons/TagIcon.astro'
 import ToggleTheme from './ToggleTheme.astro'
+import Image from 'astro/components/Image.astro'
+import Logo from '../assets/images/CUBlogo60.gif'
 
 // ADD YOUR SOCIAL NETWORKS HERE
 const SOCIALNETWORKS = [
@@ -23,8 +25,13 @@ const SOCIALNETWORKS = [
 ]
 ---
 
-<header class='relative flex items-center h-12 font-semibold'>
-	<a class='text-lg mr-auto' href='/'>Главная</a>
+<header class='relative flex items-center h-16 font-semibold lg:px-8'>
+	<a class='text-lg mr-auto flex items-center justify-between lg:w-auto' href='/'>
+		<span class='mr-4'>
+			<Image class='rounded-full' src={Logo} alt={`LogoCublog`} />
+		</span>
+		<span>CUBLOG</span>
+	</a>
 
 	<div
 		id='astro-header-drawer'

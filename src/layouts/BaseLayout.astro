@@ -19,17 +19,17 @@ const { title, description, image, articleDate } = Astro.props
 
 	<body class='bg-white text-stone-950 dark:bg-[#0a0910] dark:text-white'>
 		<main
-			class='px-5 sm:mx-auto sm:px-8 lg:px-0 antialiased max-w-full xl:max-w-[80%] grid gap-12 mt-4 overflow-hidden md:overflow-visible'
+			class='px-5 sm:mx-auto sm:px-8 lg:px-0 antialiased max-w-full xl:max-w-[90%] grid gap-12 mt-4 overflow-hidden md:overflow-visible'
 		>
 			<Header />
 			<slot />
 			<Footer />
 		</main>
 		<TwSizeIndicator />
-		<style>
+		<!-- <style>
 			body {
 				margin-left: calc(100vw - 100%); /* prevent layout shift */
 			}
-		</style>
+		</style> -->
 	</body>
 </html>
