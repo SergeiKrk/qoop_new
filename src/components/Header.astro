@@ -25,10 +25,14 @@ const SOCIALNETWORKS = [
 ]
 ---
 
-<header class='relative flex items-center h-16 font-semibold lg:px-8'>
+<header class='relative flex items-center h-24 font-semibold lg:px-8'>
 	<a class='text-lg mr-auto flex items-center justify-between lg:w-auto' href='/'>
 		<span class='mr-4'>
-			<Image class='rounded-full' width='60' height='60' src={Logo} alt={`LogoCublog`} />
+			<Image
+				class='rounded-full w-[60px] lg:w-[80px] h-[60px] lg:h-[80px]'
+				src={Logo}
+				alt={`LogoCublog`}
+			/>
 		</span>
 		<span>CUBLOG</span>
 	</a>
@@ -44,7 +48,7 @@ const SOCIALNETWORKS = [
 				class='flex flex-col gap-4 md:flex-row md:border-r-2 border-black pr-4 dark:border-white'
 			>
 				<HeaderLink href='/tags' class='flex items-center gap-1 text-2xl md:text-base'>
-					<TagIcon /> Тэги
+					<TagIcon /> Теги
 				</HeaderLink>
 			</div>
 
