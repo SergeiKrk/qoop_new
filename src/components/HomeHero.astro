@@ -8,22 +8,26 @@ import im4 from '../assets/images/gde-luchshe-zhit-v-rossii-na-pensii.webp'
 const images = [
 	{
 		src: im1,
-		alt: 'Интерьер',
+		alt: 'Дизайн интерьера',
+		txt: 'Интерьер',
 		link: '/category/интерьер/1'
 	},
 	{
 		src: im3,
-		alt: 'Ремонт и отделка',
+		alt: 'Отделка',
+		txt: 'Ремонт и отделка',
 		link: '/category/ремонт-и-отделка/1'
 	},
 	{
 		src: im2,
-		alt: 'Полезные советы',
+		alt: 'Советы',
+		txt: 'Полезные советы',
 		link: '/category/полезные-советы/1'
 	},
 	{
 		src: im4,
-		alt: 'Это интересно',
+		alt: 'Интересно',
+		txt: 'Это интересно',
 		link: '/category/другое/1'
 	}
 ]
@@ -41,7 +45,7 @@ const images = [
 		/>
 		<div class='absolute inset-0 flex items-center justify-center'>
 			<span class='text-white text-3xl xl:px-6 font-bold'>
-				{images[0].alt}
+				{images[0].txt}
 			</span>
 		</div>
 	</a>
@@ -60,7 +64,7 @@ const images = [
 					/>
 					<div class='absolute inset-0 flex items-center justify-center'>
 						<span class='text-white text-lg lg:text-xl 2xl:text-3xl xl:px-6 font-bold'>
-							{image.alt}
+							{image.txt}
 						</span>
 					</div>
 				</a>
@@ -78,7 +82,7 @@ const images = [
 		/>
 		<div class='absolute inset-0 flex items-center justify-center'>
 			<span class='text-white text-3xl xl:px-6 font-bold'>
-				{images[3].alt}
+				{images[3].txt}
 			</span>
 		</div>
 	</a>
