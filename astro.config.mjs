@@ -6,7 +6,7 @@ import { remarkReadingTime } from './src/utils/readTime.ts'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://blog-template-gray.vercel.app/',
+	site: 'https://cublog.ru/',
 	image: {
 		service: {
 			entrypoint: 'astro/assets/services/noop'
