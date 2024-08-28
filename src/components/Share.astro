@@ -1,7 +1,10 @@
 ---
 import { siteConfig } from '@/data/site.config'
-import TwitterColorIcon from './icons/TwitterColorIcon.astro'
-import LinkedinIcon from './icons/linkedinIcon.astro'
+import Vk from './icons/Vk.astro'
+import Tg from './icons/Tg.astro'
+import Viber from './icons/Viber.astro'
+import Whatsapp from './icons/Whatsapp.astro'
+import Pinterest from './icons/Pinterest.astro'
 const message = siteConfig.shareMessage
 
 const URL = Astro.url.href
@@ -9,20 +12,37 @@ const URL = Astro.url.href
 
 <div class='flex flex-col gap-2'>
 	<span class='mb-1 font-bold text-2xl'>Поделиться</span>
-	<ul class='flex gap-3 text-black dark:text-white'>
+	<ul class='flex gap-1 text-black dark:text-white'>
 		<li>
 			<a
-				href={`https://twitter.com/intent/tweet?text=${message + ' ' + URL}`}
-				aria-label='Share on Twitter'><TwitterColorIcon /></a
+				href={`http://vk.com/share.php?url=${URL}&title=${message}&noparse=true`}
+				aria-label='Поделиться в Vk'
+			>
+				<Vk /></a
+			>
+		</li>
+		<li>
+			<a href={`https://t.me/share/url?url=${URL}&text=${message}`} aria-label='Поделиться в Tg'>
+				<Tg /></a
+			>
+		</li>
+		<li>
+			<a href={`viber://forward?text=${URL}%20|${message}`} aria-label='Поделиться в Viber'>
+				<Viber /></a
+			>
+		</li>
+		<li>
+			<a href={`whatsapp://send?text=${message}|%20${URL}`} aria-label='Поделиться в Whatsapp'>
+				<Whatsapp /></a
 			>
 		</li>
 		<li>
 			<a
-				href={`https://www.linkedin.com/shareArticle?mini=true&url=${URL}`}
-				aria-label='Share on LinkedIn'
+				href={`http://pinterest.com/pin/create/button/?url=${URL}&description=${message}`}
+				aria-label='Поделиться в Pinterest'
 			>
-				<LinkedinIcon /></a
-			>
+				<Pinterest />
+			</a>
 		</li>
 	</ul>
 </div>
